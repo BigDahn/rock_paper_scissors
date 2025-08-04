@@ -1,5 +1,6 @@
 import { cloneElement, createContext, useContext, useState } from "react";
 import { createPortal } from "react-dom";
+import { AnimatePresence, motion } from "motion/react";
 
 const ModalContext = createContext();
 
@@ -28,20 +29,26 @@ function ModalWindow({ children, name }) {
 
   return createPortal(
     <main className="bg-black/50 fixed inset-0 flex m-auto">
-      <div className="bg-white w-[400px] h-[415px] flex text-black m-auto  flex-col px-6 justify-evenly rounded-lg">
-        <div className="flex items-center justify-between">
-          <h3 className="font-bold text-[32px] leading-[32px] text-[#3B4262]">
-            RULES
-          </h3>
-          <img
-            src="/icon-close.svg"
-            role="button"
-            className="cursor-pointer"
-            onClick={() => close()}
-          />
-        </div>
-        <div className="flex items-center justify-center">{children}</div>
-      </div>
+      <AnimatePresence>
+        <motion.div
+          className="bg-white w-[400px] h-[415px] flex text-black m-auto  flex-col px-6 justify-evenly rounded-lg"
+          layoutId="modal"
+          transition={{ duration: 0.8 }}
+        >
+          <div className="flex items-center justify-between">
+            <h3 className="font-bold text-[32px] leading-[32px] text-[#3B4262]">
+              RULES
+            </h3>
+            <img
+              src="/icon-close.svg"
+              role="button"
+              className="cursor-pointer"
+              onClick={() => close()}
+            />
+          </div>
+          <div className="flex items-center justify-center">{children}</div>
+        </motion.div>
+      </AnimatePresence>
     </main>,
     document.body
   );
