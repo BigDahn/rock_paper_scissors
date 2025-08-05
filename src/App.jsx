@@ -3,7 +3,7 @@ import Modal from "./Modal";
 import { motion } from "motion/react";
 function App() {
   return (
-    <div className="bg-linear-to-r from-[#1F3757] to-[#131537] w-screen h-screen flex flex-col justify-between pt-6 pb-4">
+    <div className="bg-linear-to-r from-[#1F3757] to-[#131537] w-screen h-screen flex flex-col justify-between pt-6 pb-4 font-Barlow-Semi-Condensed">
       <HomeScreen />
       <div className=" flex justify-end px-8  ">
         <Modal>
