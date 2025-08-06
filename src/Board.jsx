@@ -1,14 +1,10 @@
 import { useGameHook } from "./context/Game";
 
 function Board() {
-  const { UserOption, dispatch, Options, ComputerOption } = useGameHook();
+  const { UserOption, dispatch } = useGameHook();
 
   function userClick(name) {
     dispatch({ type: "user", payload: name });
-
-    //const computerNum = Math.floor(Math.random() * 3);
-
-    // dispatch({ type: "computer", payload: computerNum });
   }
 
   return (

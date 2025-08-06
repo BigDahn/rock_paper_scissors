@@ -5,9 +5,7 @@ import App from "./App.jsx";
 import { Game } from "./context/Game.jsx";
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <Game>
-      <App />
-    </Game>
-  </StrictMode>
+  <Game>
+    <App />
+  </Game>
 );

@@ -2,13 +2,34 @@ import { createContext, useContext, useReducer } from "react";
 const GameContext = createContext();
 
 const Options = [
-  { name: "paper", image: "/icon-paper.svg" },
-  { name: "scissors", image: "/icon-scissors.svg" },
-  { name: "rock", image: "/icon-rock.svg" },
+  {
+    name: "paper",
+    image: "/icon-paper.svg",
+    color: {
+      bgColor: "bg-[#4664F4] ",
+      shadow: "shadow-[inset_0_-8px_0_#2A45C2]",
+    },
+  },
+  {
+    name: "scissors",
+    image: "/icon-scissors.svg",
+    color: {
+      bgColor: "bg-[#EB9F0E]",
+      shadow: "shadow-[inset_0_-8px_0_#C76C1B]",
+    },
+  },
+  {
+    name: "rock",
+    image: "/icon-rock.svg",
+    color: {
+      bgColor: "bg-[#DB2E4D]",
+      shadow: "shadow-[inset_0_-8px_0_#9D1634] ",
+    },
+  },
 ];
 
 const initialState = {
-  score: 16,
+  score: 1,
   step: 1,
   UserOption: [],
   ComputerOption: [],
@@ -25,6 +46,7 @@ function reducer(state, action) {
       };
     }
     case "computer": {
+      console.log(action.payload);
       return {
         ...state,
         step: state.step + 1,
@@ -38,15 +60,16 @@ function reducer(state, action) {
 
         Outcome: action.payload,
         score:
-          action.payload === "You Win"
-            ? state.score++
-            : action.payload === "You Lose"
-            ? state.score--
+          action.payload === "YOU WIN"
+            ? state.score + 1
+            : action.payload === "YOU LOSE" && state.score === 0
+            ? state.score
+            : action.payload === "YOU LOSE" && state.score != 0
+            ? state.score - 1
             : state.score,
       };
     }
     case "replay": {
-      console.log(action.payload);
       return {
         ...state,
         Outcome: "",
