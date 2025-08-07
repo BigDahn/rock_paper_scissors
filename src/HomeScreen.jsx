@@ -9,10 +9,8 @@ import { AnimatePresence, motion } from "motion/react";
 function HomeScreen() {
   const { step } = useGameHook();
 
-  console.log(step);
-
   return (
-    <div className=" flex flex-col items-center gap-[2rem] w-fit justify-center m-auto   h-full overflow-hidden">
+    <div className=" flex flex-col items-center gap-[3rem] lg:gap-[2rem] w-screen lg:w-fit lg:justify-center m-auto  justify-start h-full pt-6   overflow-hidden">
       <Header />
       <AnimatePresence>
         {step === 1 && <Board />}

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useGameHook } from "./context/Game";
+import { motion } from "motion/react";
 
 function WinningTile() {
   const { UserOption, Outcome, dispatch, ComputerOption, score } =
@@ -36,13 +37,31 @@ function WinningTile() {
     return dispatch({ type: "score", payload: "DRAW" });
   }
   useEffect(() => {
-    checkWinner(UserChoice, ComputerChoice);
+    setTimeout(() => {
+      checkWinner(UserChoice, ComputerChoice);
+    }, 700);
   }, []);
-  //checkWinner(UserOption[0].name, ComputerOption?.name);
 
-  // console.log(Outcome);
   return (
-    <div className="w-full h-[430px]  ">
+    <motion.div
+      initial={{
+        opacity: 0,
+        y: 900,
+      }}
+      animate={{
+        opacity: 1,
+        y: 10,
+      }}
+      exit={{
+        opacity: 0,
+        y: 900,
+      }}
+      transition={{
+        duration: 1,
+        ease: "easeInOut",
+      }}
+      className="w-full h-[430px]  "
+    >
       <main className="flex justify-between w-full ">
         <div className="flex flex-col justify-center items-center gap-3">
           <h3 className="font-bold text-[22px] leading-[32px] tracking-[3px] text-[#FFFFFF]">
@@ -88,7 +107,7 @@ function WinningTile() {
           </button>
         </div>
       </main>
-    </div>
+    </motion.div>
   );
 }
 

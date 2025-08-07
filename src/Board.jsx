@@ -1,4 +1,5 @@
 import { useGameHook } from "./context/Game";
+import { motion } from "motion/react";
 
 function Board() {
   const { UserOption, dispatch } = useGameHook();
@@ -8,7 +9,25 @@ function Board() {
   }
 
   return (
-    <div className="w-[476px]  bg-[url(/bg-triangle.svg)] bg-center bg-no-repeat h-[430px] ">
+    <motion.div
+      initial={{
+        opacity: 0,
+        y: 900,
+      }}
+      animate={{
+        opacity: 1,
+        y: 10,
+      }}
+      exit={{
+        opacity: 0,
+        y: 900,
+      }}
+      transition={{
+        duration: 1,
+        ease: "easeInOut",
+      }}
+      className="w-[476px]  bg-[url(/bg-triangle.svg)] bg-center bg-no-repeat h-[430px] "
+    >
       <main className="grid grid-cols-1 justify-center place-items-center h-full w-full ">
         <section className="flex justify-between">
           <button
@@ -48,7 +67,7 @@ function Board() {
           </button>
         </div>
       </main>
-    </div>
+    </motion.div>
   );
 }
 
