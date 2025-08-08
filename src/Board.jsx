@@ -39,7 +39,7 @@ function Board() {
               <div className="bg-gray-300 w-[152px] h-[105px] rounded-full flex items-center justify-center shadow-[inset_0_6px_0_0_#BABFD4]">
                 <img
                   src="/icon-paper.svg"
-                  className="w-[41px] h-[41px] lg:w-[60px] lg:h-[60px]"
+                  className="w-[41px] h-[41px] md:w-[60px] md:h-[60px]"
                 />
               </div>
             </div>
@@ -53,7 +53,7 @@ function Board() {
               <div className="bg-gray-300 w-[152px] h-[105px] rounded-full flex items-center justify-center shadow-[inset_0_6px_0_0_#BABFD4]">
                 <img
                   src="/icon-scissors.svg"
-                  className="w-[41px] h-[41px] lg:w-[60px] lg:h-[60px]"
+                  className="w-[41px] h-[41px] md:w-[60px] md:h-[60px]"
                 />
               </div>
             </div>
@@ -69,7 +69,7 @@ function Board() {
               <div className="bg-gray-300 w-[152px] h-[105px] rounded-full flex items-center justify-center  shadow-[inset_0_6px_0_0_#BABFD4]">
                 <img
                   src="/icon-rock.svg"
-                  className="w-[41px] h-[41px] lg:w-[60px] lg:h-[60px]"
+                  className="w-[41px] h-[41px] md:w-[60px] md:h-[60px]"
                 />
               </div>
             </div>

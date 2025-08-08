@@ -31,18 +31,18 @@ function ModalWindow({ children, name }) {
     <main className="bg-black/50 fixed inset-0 flex m-auto">
       <AnimatePresence>
         <motion.div
-          className="bg-white w-[400px] h-full lg:h-[415px] flex text-black m-auto  flex-col px-6 justify-evenly rounded-lg items-center lg:items-start lg:px-6"
+          className="bg-white w-[400px] h-full md:h-[415px] flex text-black m-auto  flex-col px-6 justify-evenly rounded-lg items-center md:items-start md:px-6"
           layoutId="modal"
           transition={{ duration: 0.8 }}
         >
-          <div className="flex items-center justify-center lg:justify-between w-full">
+          <div className="flex items-center justify-center md:justify-between w-full">
             <h3 className="font-bold text-[32px] leading-[32px] text-[#3B4262]">
               RULES
             </h3>
             <img
               src="/icon-close.svg"
               role="button"
-              className="cursor-pointer hidden lg:flex gap-8"
+              className="cursor-pointer hidden md:flex gap-8"
               onClick={() => close()}
             />
           </div>
@@ -53,7 +53,7 @@ function ModalWindow({ children, name }) {
             <img
               src="/icon-close.svg"
               role="button"
-              className="cursor-pointer lg:hidden"
+              className="cursor-pointer md:hidden"
               onClick={() => close()}
             />
           </div>

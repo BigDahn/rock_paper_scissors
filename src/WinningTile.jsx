@@ -27,9 +27,9 @@ function WinningTile() {
         duration: 1,
         ease: "easeInOut",
       }}
-      className="w-full h-[430px]  "
+      className="w-fit  h-[430px]  "
     >
-      <main className="flex justify-between gap-[3rem] flex-col lg:flex-row w-full ">
+      <main className="flex  gap-[3rem] flex-col lg:flex-row  justify-center ">
         <div className=" order-last lg:hidden flex flex-col lg:justify-center gap-5 items-center px-7">
           <h3 className="font-bold text-[56px] font-Barlow-Semi-Condensed  text-[#FFFFFF]">
             {Outcome}
@@ -45,25 +45,25 @@ function WinningTile() {
             PLAY AGAIN
           </button>
         </div>
-        <div className="flex justify-between gap-[3rem] ">
+        <div className="flex justify-between gap-[2rem] md:gap-[1rem] lg:gap-[2rem]  ">
           <div className="flex flex-col justify-center items-center gap-3">
-            <h3 className="font-bold text-[15px] leading-[32px] tracking-[1.88px] lg:text-[22px] lg:leading-[32px] lg:tracking-[3px] text-[#FFFFFF] lg:order-first order-last">
+            <h3 className="font-bold text-[15px] leading-[32px] tracking-[1.88px] md:text-[22px] lg:leading-[32px] md:tracking-[3px] text-[#FFFFFF] md:order-first order-last">
               YOU PICKED
             </h3>
-            <button className="lg:w-[292px] lg:h-[300px] w-[130px] h-[133px]  flex items-center justify-center cursor-pointer hover:shadow-2xl hover:transition-all hover:duration-100 hover:ease-linear rounded-full">
+            <button className="md:w-[292px] md:h-[300px] w-[130px] h-[133px]  flex items-center justify-center cursor-pointer hover:shadow-2xl hover:transition-all hover:duration-100 hover:ease-linear rounded-full">
               <div
-                className={`w-[129px] h-[126px] lg:w-[224px] lg:h-[224px] rounded-full  px-6 flex items-center justify-center ${color.bgColor} ${color.shadow}`}
+                className={`w-[129px] h-[126px] md:w-[224px] md:h-[224px] rounded-full  px-6 flex items-center justify-center ${color.bgColor} ${color.shadow}`}
               >
-                <div className="bg-gray-300  w-[110px] h-[80px] lg:w-[224px] lg:h-[178px] rounded-full flex items-center justify-center shadow-[inset_0_8px_0_0_#BABFD4]">
+                <div className="bg-gray-300  w-[110px] h-[80px] md:w-[224px] md:h-[178px] rounded-full flex items-center justify-center shadow-[inset_0_8px_0_0_#BABFD4]">
                   <img
                     src={image}
-                    className="w-[41px] h-[41px] lg:w-[60px] lg:h-[60px]"
+                    className="w-[41px] h-[41px] md:w-[60px] md:h-[60px]"
                   />
                 </div>
               </div>
             </button>
           </div>
-          <div className=" hidden lg:flex lg:flex-col lg:justify-center gap-5 items-center px-7">
+          <div className=" hidden lg:flex md:flex-col lg:justify-center gap-5 items-center px-7">
             <h3 className="font-bold text-[56px] font-Barlow-Semi-Condensed  text-[#FFFFFF]">
               {Outcome}
             </h3>
@@ -79,17 +79,17 @@ function WinningTile() {
             </button>
           </div>
           <div className="flex flex-col justify-center items-center gap-3">
-            <h3 className="font-bold text-[15px] leading-[32px] tracking-[1.88px] lg:text-[22px] lg:leading-[32px] lg:tracking-[3px] text-[#FFFFFF] order-last lg:order-first">
+            <h3 className="font-bold text-[15px] leading-[32px] tracking-[1.88px] md:text-[22px] md:leading-[32px] md:tracking-[3px] text-[#FFFFFF] order-last md:order-first">
               THE HOUSE PICKED
             </h3>
-            <button className="w-[130px] h-[133px] lg:w-[292px] lg:h-[300px]  flex items-center justify-center cursor-pointer hover:shadow-2xl hover:transition-all hover:duration-100 hover:ease-linear rounded-full">
+            <button className="w-[130px] h-[133px] md:w-[292px] md:h-[300px]  flex items-center justify-center cursor-pointer hover:shadow-2xl hover:transition-all hover:duration-100 hover:ease-linear rounded-full">
               <div
-                className={` w-[129px] h-[126px]  lg:w-[224px] lg:h-[224px] rounded-full  px-6 flex items-center justify-center  ${ComputerColor.bgColor} ${ComputerColor.shadow}`}
+                className={` w-[129px] h-[126px]  md:w-[224px] md:h-[224px] rounded-full  px-6 flex items-center justify-center  ${ComputerColor.bgColor} ${ComputerColor.shadow}`}
               >
-                <div className="bg-gray-300 w-[110px] h-[80px] lg:w-[224px] lg:h-[178px] rounded-full flex items-center justify-center shadow-[inset_0_8px_0_0_#BABFD4]">
+                <div className="bg-gray-300 w-[110px] h-[80px] md:w-[224px] md:h-[178px] rounded-full flex items-center justify-center shadow-[inset_0_8px_0_0_#BABFD4]">
                   <img
                     src={ComputerImage}
-                    className="w-[41px] h-[41px] lg:w-[60px] lg:h-[60px]"
+                    className="w-[41px] h-[41px] md:w-[60px] md:h-[60px]"
                   />
                 </div>
               </div>
