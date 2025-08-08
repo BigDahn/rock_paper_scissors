@@ -46,7 +46,6 @@ function reducer(state, action) {
       };
     }
     case "computer": {
-      console.log(action.payload);
       return {
         ...state,
         step: state.step + 1,
@@ -54,10 +53,9 @@ function reducer(state, action) {
       };
     }
     case "score": {
-      console.log(action.payload);
       return {
         ...state,
-
+        step: state.step + 1,
         Outcome: action.payload,
         score:
           action.payload === "YOU WIN"

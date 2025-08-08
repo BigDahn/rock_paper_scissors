@@ -37,7 +37,10 @@ function Board() {
           >
             <div className="w-[152px] h-[152px] rounded-full bg-[#4664F4] px-6 flex items-center justify-center shadow-[inset_0_-6px_0_#2A45C2]">
               <div className="bg-gray-300 w-[152px] h-[105px] rounded-full flex items-center justify-center shadow-[inset_0_6px_0_0_#BABFD4]">
-                <img src="/icon-paper.svg" />
+                <img
+                  src="/icon-paper.svg"
+                  className="w-[41px] h-[41px] lg:w-[60px] lg:h-[60px]"
+                />
               </div>
             </div>
           </button>
@@ -48,7 +51,10 @@ function Board() {
           >
             <div className="w-[152px] h-[152px]  bg-[#EB9F0E] px-6 rounded-full flex items-center justify-center shadow-[inset_0_-6px_0_#C76C1B]">
               <div className="bg-gray-300 w-[152px] h-[105px] rounded-full flex items-center justify-center shadow-[inset_0_6px_0_0_#BABFD4]">
-                <img src="/icon-scissors.svg" />
+                <img
+                  src="/icon-scissors.svg"
+                  className="w-[41px] h-[41px] lg:w-[60px] lg:h-[60px]"
+                />
               </div>
             </div>
           </button>
@@ -61,7 +67,10 @@ function Board() {
           >
             <div className="w-[152px] h-[152px]  bg-[#DB2E4D] px-6 rounded-full flex  items-center justify-center shadow-[inset_0_-6px_0_#9D1634]  ">
               <div className="bg-gray-300 w-[152px] h-[105px] rounded-full flex items-center justify-center  shadow-[inset_0_6px_0_0_#BABFD4]">
-                <img src="/icon-rock.svg" />
+                <img
+                  src="/icon-rock.svg"
+                  className="w-[41px] h-[41px] lg:w-[60px] lg:h-[60px]"
+                />
               </div>
             </div>
           </button>
