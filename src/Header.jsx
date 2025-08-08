@@ -1,4 +1,3 @@
-import React from "react";
 import { useGameHook } from "./context/Game";
 
 function Header() {

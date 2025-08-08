@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useGameHook } from "./context/Game";
 import { motion } from "motion/react";
 

@@ -6,12 +6,8 @@ function WinningTile() {
   const { UserOption, Outcome, dispatch, ComputerOption, score } =
     useGameHook();
 
-  const { name: UserChoice, image, color } = UserOption[0];
-  const {
-    name: ComputerChoice,
-    image: ComputerImage,
-    color: ComputerColor,
-  } = ComputerOption;
+  const { image, color } = UserOption[0];
+  const { image: ComputerImage, color: ComputerColor } = ComputerOption;
 
   return (
     <motion.div

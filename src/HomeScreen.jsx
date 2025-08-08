@@ -1,10 +1,10 @@
-import React from "react";
+import { useGameHook } from "./context/Game";
+import { AnimatePresence } from "motion/react";
+
 import Header from "./Header";
 import Board from "./Board";
 import WinningTile from "./WinningTile";
-import { useGameHook } from "./context/Game";
 import PreStep from "./PreStep";
-import { AnimatePresence, motion } from "motion/react";
 import Step from "./Step";
 
 function HomeScreen() {
@@ -25,9 +25,3 @@ function HomeScreen() {
 }
 
 export default HomeScreen;
-
-{
-  /* {UserOption.length < 1 && ComputerOption < 1 && <Board />}
-      {UserOption.length >= 1 && ComputerOption && <WinningTile />}
-        {step === 3 && <WinningTile />} */
-}
